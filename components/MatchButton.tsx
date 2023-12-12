@@ -36,10 +36,10 @@ export const MatchButton = ({
     <button
       // formAction={findMatch}
       onClick={findMatch}
-      className={`bg-red-600 hover:bg-red-600/90 active:bg-red-600/80 rounded-full py-2.5 text-md w-full `}
+      className={`bg-red-600 hover:bg-red-600/90 active:bg-red-600/80 rounded-full py-2.5 text-md w-full  font-bold`}
       // disabled={isMatch}
     >
-      Match Me!
+      Draw a Name!
     </button>
   );
 };

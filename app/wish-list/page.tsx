@@ -94,7 +94,7 @@ export default async function WishListPage() {
             required
           />
 
-          <button className="bg-green-700 rounded-md px-4 py-2 text-foreground mb-2">
+          <button className="bg-green-700 rounded-full px-4 py-2 text-foreground mb-2 font-bold">
             Add Link
           </button>
 

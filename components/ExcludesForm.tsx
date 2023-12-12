@@ -68,7 +68,7 @@ export const ExcludesForm = async () => {
 
       <button
         // formAction={updateExcludes}
-        className="bg-green-700 hover:bg-green-800 transition-all rounded-full px-4 py-2 text-foreground mb-2"
+        className="bg-green-700 hover:bg-green-800 transition-all rounded-full px-4 py-2 text-foreground mb-2 font-bold"
       >
         Add Name
       </button>
