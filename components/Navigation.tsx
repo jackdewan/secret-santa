@@ -4,7 +4,7 @@ import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 import { Profile } from "@/utils/supabase/types";
 
-export default async function AuthButton() {
+export default async function Navigation() {
   const cookieStore = cookies();
   const supabase = createClient(cookieStore);
 

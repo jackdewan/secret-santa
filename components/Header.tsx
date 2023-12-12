@@ -1,5 +1,5 @@
 import Link from "next/link";
-import AuthButton from "./AuthButton";
+import Navigation from "./Navigation";
 import NextLogo from "./NextLogo";
 import SupabaseLogo from "./SupabaseLogo";
 import Santa from "./Santa";
@@ -14,7 +14,7 @@ export default function Header() {
             Secret Santa
           </h2>
         </Link>
-        <AuthButton />
+        <Navigation />
       </nav>
     </header>
   );

@@ -1,7 +1,7 @@
 "use server";
 import { redirect } from "next/navigation";
 import DeployButton from "../components/DeployButton";
-import AuthButton from "../components/AuthButton";
+import AuthButton from "../components/Navigation";
 import { createClient } from "@/utils/supabase/server";
 import ConnectSupabaseSteps from "@/components/ConnectSupabaseSteps";
 import SignUpUserSteps from "@/components/SignUpUserSteps";
