@@ -8,12 +8,12 @@ export default function Header() {
   return (
     <header className="container">
       <nav className="py-5 flex justify-between items-center">
-        <div className="flex items-center text-red-500">
+        <Link href="/" className="flex items-center text-red-500">
           <Santa />
           <h2 className="font-pacifico tracking-widest text-2xl">
             Secret Santa
           </h2>
-        </div>
+        </Link>
         <AuthButton />
       </nav>
     </header>

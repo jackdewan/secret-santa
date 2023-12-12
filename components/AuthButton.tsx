@@ -37,7 +37,7 @@ export default async function AuthButton() {
         My Wish List
       </Link>
       <form action={signOut}>
-        <button className="py-2 px-4 rounded-md no-underline hover:bg-red-700/30">
+        <button className="py-2 px-4 rounded-full no-underline hover:bg-red-700/30">
           Logout
         </button>
       </form>
