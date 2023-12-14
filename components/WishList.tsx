@@ -46,14 +46,14 @@ export const WishList = async ({ id }: { id: string }) => {
         return (
           <li
             key={link.id}
-            className="flex items-center justify-between p-4 bg-black/10 gap-5 rounded-lg"
+            className="flex items-center justify-between w-full p-4 bg-black/10 gap-5 rounded-lg"
           >
             <a
               href={link.href}
               target="_blank"
-              className="hover:cursor-pointer hover:text-red-500 transition-colors duration-300 py-1"
+              className="hover:cursor-pointer hover:text-red-500 transition-colors duration-300 py-1 min-w-0"
             >
-              <span className="text-clip overflow-hidden">{link.title}</span>
+              <span className=" break-words">{link.title}</span>
             </a>
             {user?.id === id ? (
               <form action={deleteLink}>
