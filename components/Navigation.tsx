@@ -28,13 +28,13 @@ export default async function Navigation() {
   };
 
   return user ? (
-    <div className="flex items-center gap-4">
+    <div className="flex flex-col-reverse sm:flex-row sm:items-center gap-2 sm:gap-4">
       {/* <span>Hey, {profile.user_name}!</span> */}
       {/* <Link className="hover:text-red-300" href="/">
         Home
       </Link> */}
-      <Link className="hover:text-red-300" href="/wish-list">
-        My Wish List
+      <Link className="hover:text-red-300 py-1" href="/wish-list">
+        Wish List
       </Link>
       <form action={signOut}>
         <button className="py-2 px-4 rounded-full no-underline hover:bg-red-700/30">
