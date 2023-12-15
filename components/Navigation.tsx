@@ -33,11 +33,11 @@ export default async function Navigation() {
       {/* <Link className="hover:text-red-300" href="/">
         Home
       </Link> */}
-      <Link className="hover:text-red-300 py-1" href="/wish-list">
+      <Link className="hover:text-red-500 py-1" href="/wish-list">
         Wish List
       </Link>
       <form action={signOut}>
-        <button className="py-2 px-4 rounded-full no-underline hover:bg-red-700/30">
+        <button className="py-2 px-4 rounded-full no-underline hover:bg-red-500/50">
           Logout
         </button>
       </form>

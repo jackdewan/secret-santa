@@ -47,7 +47,7 @@ export default async function Index({
 
   return (
     <main className="container max-w-sm space-y-10">
-      <h2 className="font-bold text-4xl mb-4 font-pacifico tracking-widest text-green-400">
+      <h2 className="font-bold text-4xl py-10 font-pacifico tracking-widest text-green-400">
         Hello, {profile?.user_name}!
       </h2>
 
