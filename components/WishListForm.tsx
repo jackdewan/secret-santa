@@ -16,7 +16,7 @@ export const WishListForm = () => {
       }}
     >
       <input
-        className="rounded-md px-4 py-2 bg-black/30 border mb-6"
+        className="rounded-full px-4 py-2 bg-black/30 mb-6 border-gray-300/50 border"
         name="href"
         type="text"
         placeholder="https://www.example.com or Product Name"

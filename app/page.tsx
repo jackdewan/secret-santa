@@ -45,44 +45,58 @@ export default async function Index({
 
   // console.log("exclude: ", profile.exclude);
 
+  const excludeBtnText = profile?.exclude?.length
+    ? "My Excluded Names:"
+    : "Add names below to exclude them from your drawing:";
+
   return (
-    <main className="container max-w-sm space-y-10">
-      <h2 className="font-bold text-4xl py-10 font-pacifico tracking-widest text-green-400">
-        Hello, {profile?.user_name}!
-      </h2>
+    <main className="container max-w-sm space-y-20">
+      <div className="space-y-5">
+        <h2 className="font-bold text-4xl py-10 font-pacifico tracking-widest text-green-400">
+          Hello, {profile?.user_name}!
+        </h2>
 
-      {profile?.match ? (
-        <h3 className="">My Match: {match.user_name}</h3>
-      ) : (
-        <p>No Match Thus Far</p>
-      )}
-
-      <MatchButton user={user} match={match} />
-
-      {match ? (
         <div>
-          <h2 className="py-10 text-xl">{match.user_name}'s Wish List:</h2>
-          <WishList id={match?.user_id} />
+          {profile?.match ? (
+            <h3 className="">My Match: {match.user_name}</h3>
+          ) : (
+            <p>Click the button to draw a name!</p>
+          )}
         </div>
-      ) : null}
-      <h3>My Excluded Names:</h3>
+        <MatchButton user={user} match={match} />
+      </div>
 
-      <ExcludesForm />
-      {profile?.exclude?.length ? (
-        <ul className="space-y-2">
-          {profile?.exclude.map((id: string) => {
-            const prof: Profile = allProfiles?.find(
-              (el: Profile) => el?.user_id === id
-            );
-            return (
-              <li key={id} className="flex justify-between items-center">
-                <span>{prof?.user_name}</span>
-                <RemoveButton val={id} col="exclude" />
-              </li>
-            );
-          })}
-        </ul>
-      ) : null}
+      <div className="space-y-5">
+        {match ? (
+          <div>
+            <h2 className="py-10 text-xl">{match.user_name}'s Wish List:</h2>
+            <WishList id={match?.user_id} />
+          </div>
+        ) : null}
+
+        <h3>{excludeBtnText}</h3>
+
+        <ExcludesForm />
+
+        {profile?.exclude?.length ? (
+          <ul className="">
+            {profile?.exclude.map((id: string) => {
+              const prof: Profile = allProfiles?.find(
+                (el: Profile) => el?.user_id === id
+              );
+              return (
+                <li
+                  key={id}
+                  className="flex justify-between items-center bg-black/30 rounded-full px-4 py-2"
+                >
+                  <span>{prof?.user_name}</span>
+                  <RemoveButton val={id} col="exclude" />
+                </li>
+              );
+            })}
+          </ul>
+        ) : null}
+      </div>
     </main>
   );
 }

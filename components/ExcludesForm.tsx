@@ -49,7 +49,7 @@ export const ExcludesForm = async () => {
       <select
         id="name"
         name="name"
-        className="mt-2 block w-full rounded-full border-0 py-3 pl-3 pr-10 text-gray-900 ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-indigo-600 sm:text-sm sm:leading-6"
+        className="mt-2 block w-full rounded-full border-0 py-3 pl-3 pr-10 bg-black/50 ring-1 ring-inset ring-gray-300/50 focus:ring-2 focus:ring-indigo-600 sm:text-sm sm:leading-6"
         // defaultValue="Canada"
       >
         {allProfiles
@@ -59,7 +59,7 @@ export const ExcludesForm = async () => {
           )
           .map((prof) => {
             return (
-              <option key={prof.user_id} value={prof.user_id}>
+              <option key={prof.user_id} value={prof.user_id} className="">
                 {prof.user_name}
               </option>
             );
