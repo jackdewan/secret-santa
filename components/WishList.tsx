@@ -42,19 +42,23 @@ export const WishList = async ({ id }: { id: string }) => {
   return (
     <ul className="space-y-2">
       {links?.map((link, i) => {
-        // console.log(link);
+        console.log(link);
         return (
           <li
             key={link.id}
             className="flex items-center justify-between w-full p-4 bg-black/10 gap-5 rounded-lg"
           >
-            <a
-              href={link.href}
-              target="_blank"
-              className="hover:cursor-pointer hover:text-red-500 transition-colors duration-300 py-1 min-w-0"
-            >
-              <span className=" break-words">{link.title}</span>
-            </a>
+            {link.href ? (
+              <a
+                href={link.href}
+                target="_blank"
+                className="hover:cursor-pointer hover:text-red-500 transition-colors duration-300 py-1 min-w-0"
+              >
+                <span className="break-words">{link.title}</span>
+              </a>
+            ) : (
+              <span className="py-1 min-w-0 break-words">{link.title}</span>
+            )}
             {user?.id === id ? (
               <form action={deleteLink}>
                 <input
